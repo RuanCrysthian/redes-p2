@@ -137,7 +137,6 @@ class Conexao:
                 if self.timer is not None:
                     self.timer.cancel()
                 if len(self.pending_segments) > 0:
-                    # verifica se recebemos uma janela inteira:
                     while aux < ack_no and len(self.pending_segments) > 0:
                         variavel = self.pending_segments_payload.pop(0)
                         self.pending_segments.pop(0)
